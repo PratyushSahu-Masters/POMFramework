@@ -22,7 +22,7 @@ public class LoginPage {
 	private By loginBtn = By.xpath("//input[@value='Login']");
 	private By logoImage = By.cssSelector("img[title='naveenopencart']");
 	private By forgotPwdLink = By.linkText("Forgotten Password");
-	private By registerLink = By.linkText("Register");
+	private By regLink = By.linkText("Register");
 
 	private static final Logger LOG = Logger.getLogger(LoginPage.class);
 
@@ -70,7 +70,7 @@ public class LoginPage {
 	@Step("navigating to register page")
 	public RegisterPage navigateToRegisterPage() {
 		System.out.println("navigating to register page.....");
-		eleUtil.doClick(registerLink);
+		eleUtil.doClick(regLink);
 		return new RegisterPage(driver);
 	}
 
